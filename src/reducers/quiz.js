@@ -2,8 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
+  { id: 1, questionText: 'What are the dying words of Charles Foster Kane in Citizen Kane?', options: ['Budrose', 'Sleigh', 'Rosebud', 'Sledge'], correctAnswerIndex: 2 },
+  { id: 2, questionText: 'What was the first feature-length animated movie ever released?', options: ['Snow White and the Seven Dwarfs', 'Fantasia', 'Pinocchio', 'Bambi'], correctAnswerIndex: 0 },
+  { id: 3, questionText: 'In The Matrix, does Neo take the blue pill or the red pill?', options: ['Blue', 'Red'], correctAnswerIndex: 1 },
+  { id: 4, questionText: 'What American writer/director starred in several iconic European-produced “Spaghetti Westerns”?', options: ['John Wayne', 'Gary Cooper', 'Clint Eastwood', 'Quentin Tarantino'], correctAnswerIndex: 2 },
+  { id: 5, questionText: 'Who is the only actor to receive an Oscar nomination for acting in a Lord of the Rings movie?', options: ['Elijah Wood', 'Orlando Bloom', 'Sean Bean', 'Viggo Mortensen', 'Ian McKellen', 'Karl Urban', 'Liv Tyler'], correctAnswerIndex: 4 }
 ]
 
 const initialState = {
