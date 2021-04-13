@@ -18,24 +18,24 @@ export const CurrentQuestion = () => {
   }
 
   return (
-    <>
+    <div className="main">
       {start === true && (
-        <>
+        <div className="start-page-container">
           <h1>Welcome to the Movie Quiz 🎥</h1>
-          <p>Disclaimer: This is not a Nicolas Cage quiz</p>
           <button type="button" onClick={() => setStart(false)}> Start Quiz </button>
-        </>
+        </div>
       )}
       {start === false && (
         <div>
           {summary === false && (
-            <div>
+            <div className="question-container">
               <QuestionTitle />
               <AnswerOptions />
               <QuestionCounter />
               <NextQuestionButton />
             </div>
           )}
+  
           {summary === true && (
             <div>
               <SummaryText />
@@ -44,6 +44,6 @@ export const CurrentQuestion = () => {
           )}
         </div>
       )}
-    </>
+    </div>
   )
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +7,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7920f;
+  background-image: url("./assets/movie-template.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-family: "Karantina", cursive;
+  font-weight: 400;
+  font-size: 45px;
+  color: #fff;
+}
+
+p {
+  font-family: "Karantina", cursive;
+  font-weight: 300;
+  font-size: 30px;
+  color: #fff;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-container,
+.start-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #ffe042;
+  border: 2px #fff;
+  border-radius: 20px;
+  width: 60%;  
+}
+
+button {
+  border-radius: 20px;
+  padding: 10px;
+  font-family: "Karantina", cursive;
+  font-size: 20px;
+  background-color: #f1c37c;
 }
