@@ -1,63 +1,49 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { quiz } from '../reducers/quiz'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+
+import { QuestionTitle } from './QuestionTitle'
+import { AnswerOptions } from './AnswerOptions'
+import { QuestionCounter } from './QuestionCounter'
+import { NextQuestionButton } from './NextQuestionButton'
+import { SummaryText } from './SummaryText'
+import { FinalScore } from './FinalScore'
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
-  const checkAnswer = useSelector((state) => state.quiz.answers[state.quiz.currentQuestionIndex])
   const summary = useSelector((state) => state.quiz.quizOver)
-  const answers = useSelector((state) => state.quiz.answers)
-  const questionCount = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].id)
-  const dispatch = useDispatch()
-
-  console.log(questionCount)
-
-  const handleAnswer = (item) => {
-    const answerIndexOf = question.options.indexOf(item)
-    dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: answerIndexOf }))
-  }
+  const [start, setStart] = useState(true)
 
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>
   }
 
-  let a
-
-  if (checkAnswer !== undefined) {
-    if (checkAnswer.isCorrect) {
-      a = '✅'
-    } else if (!checkAnswer.isCorrect) {
-      a = '✖'
-    }
-  }
-
-  return (  
-    <>  
-    {summary === false && (      
-      <div>
-        <h1>Question: {question.questionText}</h1>
-        {question.options.map((item) => (
-          <div key={item}>
-            <input type="radio" name="answer" value={item} onClick={() => handleAnswer(item)} disabled={checkAnswer} required />
-            <label htmlFor={item}>{item}</label>
-          </div>
-        ))}
-        <p>{a}</p>
-        <p>Question {questionCount} out of 5</p> 
-        <button type="button" onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next Question</button>
-      </div>
-        )}
-        {summary === true && (
+  return (
+    <>
+      {start === true && (
+        <>
+          <h1>Welcome to the Movie Quiz 🎥</h1>
+          <p>Disclaimer: This is not a Nicolas Cage quiz</p>
+          <button type="button" onClick={() => setStart(false)}> Start Quiz </button>
+        </>
+      )}
+      {start === false && (
         <div>
-            <p>Done{console.log(answers)}</p>
-            {answers.map((answer) => (
-              <div> 
-                <p>{answer.answer}</p>
-                <p>{answer.isCorrect ? "✅ " : "✖" }</p>
-              </div>
-            ))}
-        </div>    
-        )}
+          {summary === false && (
+            <div>
+              <QuestionTitle />
+              <AnswerOptions />
+              <QuestionCounter />
+              <NextQuestionButton />
+            </div>
+          )}
+          {summary === true && (
+            <div>
+              <SummaryText />
+              <FinalScore />
+            </div>
+          )}
+        </div>
+      )}
     </>
   )
 }
