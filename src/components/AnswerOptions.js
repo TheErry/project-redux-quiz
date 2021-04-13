@@ -26,7 +26,7 @@ export const AnswerOptions = () => {
     })
   }, [])
 
-  let a  
+  let a
 
   if (checkAnswer !== undefined) {
     if (checkAnswer.isCorrect) {
@@ -37,22 +37,20 @@ export const AnswerOptions = () => {
   }
 
   return (
-    <div>
+    <div className="radio-buttons">
       {question.options.map((item) => (
-        <div key={item}>
-          <input 
-            type="radio" 
-            name="answer" 
-            value={item} 
-            onClick={() => handleAnswer(item)} 
-            disabled={checkAnswer} 
-            required 
-          />
+        <div className="radio-buttons" key={item}>
+          <input
+            type="radio"
+            name="answer"
+            value={item}
+            onClick={() => handleAnswer(item)}
+            disabled={checkAnswer}
+            required />
           <label htmlFor={item}>{item}</label>
         </div>
       ))}
-      <p>{a}</p>
-      
+      <span>{a}</span>
     </div>
   )
 }

@@ -21,7 +21,7 @@ export const CurrentQuestion = () => {
     <div className="main">
       {start === true && (
         <div className="start-page-container">
-          <h1>Welcome to the Movie Quiz 🎥</h1>
+          <h1>Welcome to the Movie Quiz! 🎥</h1>
           <button type="button" onClick={() => setStart(false)}> Start Quiz </button>
         </div>
       )}
@@ -35,9 +35,8 @@ export const CurrentQuestion = () => {
               <NextQuestionButton />
             </div>
           )}
-  
           {summary === true && (
-            <div>
+            <div className="summary">
               <SummaryText />
               <FinalScore />
             </div>
