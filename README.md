@@ -1,12 +1,12 @@
 # Redux quiz group project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is a Moive quiz created with react and redux.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Our major issue were to understand how the useSelector worked, but once that maked sence everything went pretty smooth. 
+If we had more time we would add more conditional functionality and present the result a bit different. 
+There are also some minor styling left. 
 
 ## View it live
 

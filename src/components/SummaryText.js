@@ -4,7 +4,11 @@ export const SummaryText = () => {
   return (
     <div>
       <h1>Your Answer Summary</h1>
-      <p>🎉 Well Done! 🎉</p>
+      <div className="text-and-emoji-container">
+        <span className="emoji" role="img" aria-label="konfetti">🎉</span>
+        <p>Well Done!</p>
+        <span className="emoji" role="img" aria-label="konfetti">🎉</span>
+      </div>
     </div>
   )
 }

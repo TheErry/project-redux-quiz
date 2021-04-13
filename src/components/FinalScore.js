@@ -13,13 +13,14 @@ export const FinalScore = () => {
       render: 'svg',
       loop: true,
       autoplay: true,
+      // eslint-disable-next-line global-require
       animationData: require('../assets/animations/fireworks.json')
     })
   }, [])
 
   return (
     <div>
-      <div className="lottieContainer" ref={lottieContainer}></div>
+      <div className="lottieContainer" ref={lottieContainer} />
       {answers.map((answer) => (
         <div>
           <p>Your answer: {answer.answer}</p>

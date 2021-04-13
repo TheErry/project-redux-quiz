@@ -21,7 +21,10 @@ export const CurrentQuestion = () => {
     <div className="main">
       {start === true && (
         <div className="start-page-container">
-          <h1>Welcome to the Movie Quiz! 🎥</h1>
+          <div className="text-and-emoji-container">
+            <h1>Welcome to the Movie Quiz! </h1>
+            <span className="emoji" role="img" aria-label="video-camera">🎥</span>
+          </div>
           <button type="button" onClick={() => setStart(false)}> Start Quiz </button>
         </div>
       )}

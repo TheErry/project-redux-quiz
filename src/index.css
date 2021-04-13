@@ -38,7 +38,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: center;
-  height: 900px; 
+  height: 100vh; 
 }
 
 .question-container,
@@ -90,5 +90,15 @@ button:hover {
 .summary {
   background-color: #f7920f;
   border: 3px solid #fff;
-  border-radius: 20px;
+  border-radius: 20px; 
+  box-shadow: 4px 4px 4px rgb(80, 80, 80);
+}
+
+.text-and-emoji-container {
+  display: flex;   
+}
+
+.emoji {
+  margin: 30.15px 3px;
+  font-size: 30px;
 }

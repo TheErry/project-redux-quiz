@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import lottie from 'lottie-web'
 
 import { quiz } from '../reducers/quiz'
 
@@ -13,18 +12,6 @@ export const AnswerOptions = () => {
     const answerIndexOf = question.options.indexOf(item)
     dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: answerIndexOf }))
   }
-
-  const lottieContainer = useRef(null)
-
-  useEffect(() => {
-    lottie.loadAnimation({
-      container: lottieContainer.current,
-      render: 'svg',
-      loop: false,
-      autoplay: true,
-      animationData: require('../assets/animations/correctAnswer.json')
-    })
-  }, [])
 
   let a
 
