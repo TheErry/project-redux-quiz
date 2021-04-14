@@ -14,4 +14,4 @@ If we had more time we would add more conditional functionality.
 
 ## View it live
 
-You can take the quiz here: https://quiz-movie.netlify.app/
+You can take the quiz here: https://quiz-movie-2.netlify.app/
