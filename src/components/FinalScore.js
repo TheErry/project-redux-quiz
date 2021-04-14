@@ -13,18 +13,19 @@ export const FinalScore = () => {
       render: 'svg',
       loop: true,
       autoplay: true,
-      // eslint-disable-next-line global-require
       animationData: require('../assets/animations/fireworks.json')
     })
   }, [])
 
   return (
     <div>
+                <p>You answered:</p>
       <div className="lottieContainer" ref={lottieContainer} />
       {answers.map((answer) => (
-        <div>
-          <p>Your answer: {answer.answer}</p>
-          <p>{answer.isCorrect ? '✅ ' : '✖'}</p>
+        <div className="summary-text">
+
+          <p><span className="your-answer-text">{answer.answer}</span></p>
+          <p>{answer.isCorrect ? <span className="feedback-emoji-correct" role="img" aria-label="checkmark">✅</span> : <span className="feedback-emoji" aria-label="x-mark">✖</span>}</p>
         </div>
       ))}
     </div>

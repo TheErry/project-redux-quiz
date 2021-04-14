@@ -7,6 +7,7 @@ import { QuestionCounter } from './QuestionCounter'
 import { NextQuestionButton } from './NextQuestionButton'
 import { SummaryText } from './SummaryText'
 import { FinalScore } from './FinalScore'
+import { RestartButton } from './RestartButton'
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
@@ -22,6 +23,7 @@ export const CurrentQuestion = () => {
       {start === true && (
         <div className="start-page-container">
           <div className="text-and-emoji-container">
+            <span className="emoji" role="img" aria-label="video-camera">🎥</span>
             <h1>Welcome to the Movie Quiz! </h1>
             <span className="emoji" role="img" aria-label="video-camera">🎥</span>
           </div>
@@ -29,7 +31,7 @@ export const CurrentQuestion = () => {
         </div>
       )}
       {start === false && (
-        <div>
+        <div className="text-container">
           {summary === false && (
             <div className="question-container">
               <QuestionTitle />
@@ -42,6 +44,7 @@ export const CurrentQuestion = () => {
             <div className="summary">
               <SummaryText />
               <FinalScore />
+              <RestartButton />
             </div>
           )}
         </div>

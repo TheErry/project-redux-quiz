@@ -21,6 +21,7 @@ h1 {
   font-size: 45px;
   color: #fff;
   text-align: center;
+  text-shadow: 2px 2px #000;
 }
 
 p {
@@ -28,10 +29,11 @@ p {
   font-weight: 300;
   font-size: 30px;
   color: #fff;
+  text-shadow: 1px 1px #000;
 }
+
 .main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f7920f;
@@ -52,9 +54,21 @@ p {
   background-color: #f7920f;
   border: 3px solid #fff;
   border-radius: 20px;
-  width: 60%;  
   padding-bottom: 30px;
   box-shadow: 4px 4px 4px rgb(80, 80, 80);
+}
+
+.start-page-container {
+  width: 60%;
+}
+
+.question-container {
+  padding: 20px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -73,10 +87,10 @@ button:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #fff;
+  color: #000;
   font-family: "Karantina", cursive;
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 400;
   align-items: center;
   justify-content: center;
   padding: 5px;
@@ -93,13 +107,116 @@ button:hover {
   border: 3px solid #fff;
   border-radius: 20px; 
   box-shadow: 4px 4px 4px rgb(80, 80, 80);
+  padding: 10px;
+  text-align: center;
+}
+
+.summary p, 
+.summary h1 {
+  margin: 10px;
+}
+
+.summary-emoji {
+  margin: 30.15px 3px;
+  font-size: 30px;
+  margin: 5px;
+}
+
+.feedback-text {
+  font-weight: 400;
+  padding: 5px;
 }
 
 .text-and-emoji-container {
   display: flex;   
+  justify-content: center;
 }
 
 .emoji {
   margin: 30.15px 3px;
   font-size: 30px;
+}
+
+.feedback-emoji {
+  color: red;
+  font-size: 40px;
+}
+
+.feedback-emoji-correct {
+  font-size: 30px;
+}
+
+.summary-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.your-answer-text {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1600px) {
+
+  .summary h1 {
+    font-size: 40px;
+  }
+
+  .summary p {
+    font-size: 25px;
+  }
+
+  .feedback-emoji {
+    font-size: 30px;
+  }
+
+  .feedback-emoji-correct {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 1224px) {
+
+  .summary p, 
+  .summary h1 {
+    margin: 15px;
+  }
+
+  .summary p {
+    font-size: 30px;
+  }
+
+  .summary h1 {
+    font-size: 45px;
+  }
+
+  .feedback-emoji {
+    font-size: 40px;
+  }
+
+  .feedback-emoji-correct {
+    font-size: 30px;
+  }
+
+  .feedback-text {
+    padding: 0px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .summary p {
+    font-size: 25px;
+  }
+
+  .feedback-emoji {
+    font-size: 30px;
+  }
+
+  .feedback-emoji-correct {
+    font-size: 20px;
+  }
+
 }

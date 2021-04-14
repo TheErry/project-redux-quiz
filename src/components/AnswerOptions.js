@@ -30,14 +30,15 @@ export const AnswerOptions = () => {
           <input
             type="radio"
             name="answer"
+            id={item}
             value={item}
             onClick={() => handleAnswer(item)}
             disabled={checkAnswer}
             required />
-          <label htmlFor={item}>{item}</label>
+          <label htmlFor={item} for={item}>{item}</label>
         </div>
       ))}
-      <span>{a}</span>
+      <span className="feedback-emoji">{a}</span>
     </div>
   )
 }
